@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  recorder:
+    devices:
+      - /dev/bus/usb/002/002
+    restart: always
+    logging:
+      options: 
+          {'max-size':'10m', 'max-file':'5'}
+    volumes:
+        - './:/app'
+        - './gnuradio-runtime.conf:/etc/gnuradio/conf.d/gnuradio-runtime.conf'
+    image: 'robotastic/trunk-recorder:latest'

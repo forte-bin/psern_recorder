@@ -1,0 +1,31 @@
+{
+    "ver": 2,
+    "sources": [{
+        "center": 852712500,
+        "rate":     3500000,
+        "ppm": -18.0,
+        "gain": 0.0,
+        "ifGain": 40.0,
+        "bbGain": 62.0,
+        "digitalRecorders": 12,
+        "driver": "osmosdr",
+        "device": "hackrf=0"
+    }],
+    "systems": [{
+        "control_channels": [854287500],
+        "type": "p25",
+        "shortName": "psern1",
+        "apiKey": "<redacted>",
+	"talkgroupsFile": "psern.csv",
+        "audioArchive": "false",
+        "transmissionArchive": "false",
+        "modulation": "qpsk",
+        "callLog": false,
+        "talkgroupDisplayFormat": "tag_id"
+    }],
+    "controlWarnRate": 10,
+    "controlRetuneLimit": 5,
+    "uploadServer": "https://api.openmhz.com",
+    "frequencyFormat":"mhz"
+
+}
